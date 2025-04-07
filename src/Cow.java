@@ -9,38 +9,14 @@ public class Cow implements Animal{
         this.food = food;
     }
 
-    public Integer getLegs() {
-        return legs;
-    }
-
-    public void setLegs(Integer legs) {
-        this.legs = legs;
-    }
-
-    public String getSound() {
-        return sound;
-    }
-
-    public void setSound(String sound) {
-        this.sound = sound;
-    }
-
-    public String getFood() {
-        return food;
-    }
-
-    public void setFood(String food) {
-        this.food = food;
-    }
-
     @Override
     public Animal clone() {
-        return new Cow(this.legs,this.food,this.food);
+        return new Cow(legs,food,food);
     }
 
     @Override
     public void makeSound() {
-        System.out.println(sound);
+        System.out.println(getType() + " says " + sound);
     }
 
     @Override
